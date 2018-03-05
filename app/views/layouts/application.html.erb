@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aaybee</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="nav nav-top flex">
+      <a href="/" class="nav-link logo">aaybee</a>
+      <div class="flex-1"></div>
+      <a href="#" class="nav-link">your tests</a>
+      <a href="/designs/new" class="nav-link">upload design</a>
+      <a href="#" class="nav-link">
+        <img src="https://1.gravatar.com/avatar/4ebbd083830d32e580e0e16893acf85a?s=96&d=mm" class="avatar avatar-medium" />
+      </a>
+    </div>
+    <div class="nav flex">
+      <a href="#" class="nav-link nav-link-active">View all</a>
+      <a href="#" class="nav-link">View following</a>
+      <div class="flex-1"></div>
+      <a href="#" class="nav-link">Sort by date</a>
+    </div>
+    <div class="content">
+      <%= yield %>
+    </div>
+  </body>
+</html>

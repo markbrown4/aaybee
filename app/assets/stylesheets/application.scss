@@ -1,0 +1,61 @@
+/*
+ *= require_tree .
+ *= require_self
+ */
+
+@import "_core.scss";
+
+html, body {
+  margin: 0;
+}
+body {
+  background: #eee;
+  font-family: -apple-system;
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+}
+small {
+  font-size: 12px;
+}
+
+.nav {
+  height: 63px;
+  padding: 0 15px;
+  background: #fff;
+  align-items: center;
+  box-shadow: 0 1px rgba(#000, .04);
+}
+.nav-top {
+  position: relative;
+}
+.nav-link {
+  padding: 23px 14px;
+  color: rgba(#000, .7);
+  font-weight: bold;
+  position: relative;
+}
+.nav-link-active {
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 14px;
+    right: 14px;
+    height: 2px;
+    background: $red;
+  }
+  color: $red;
+}
+.logo {
+  color: $red;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.content {
+  padding: 42px 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}

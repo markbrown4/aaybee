@@ -1,0 +1,29 @@
+
+@import "_core.scss";
+
+.grid {
+  display: grid;
+}
+.grid-50 {
+  grid-template-columns: repeat(2, 50%);
+}
+.grid-gap-16 {
+  grid-gap: 16px;
+  margin-right: 16px;
+}
+.grid-gap-32 {
+  grid-gap: 32px;
+  margin-right: 32px;
+}
+.flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.flex-1 {
+  flex: 1;
+}
+.color-red { color: $red }
+.color-blue { color: $blue }
+.bg-red { background-color: $red }
+.bg-blue { background-color: $blue }

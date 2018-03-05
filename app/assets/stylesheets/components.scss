@@ -1,0 +1,57 @@
+
+@import "_core.scss";
+
+.avatar {
+  border-radius: 100%;
+  overflow: hidden;
+}
+.avatar-small {
+  width: 24px;
+  height: 24px;
+}
+.avatar-medium {
+  width: 40px;
+  height: 40px;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 2px 32px -13px rgba(13, 89, 116, 0.45);
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.placeholder {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #eee;
+}
+
+.result {
+  margin-bottom: 32px;
+}
+.result-header {
+  height: 24px;
+  align-items: center;
+  margin-bottom: 7px;
+}
+.result-header-avatar {
+  margin-right: 8px;
+}
+.result-header-name {
+  font-weight: bold;
+}
+.bar-label {
+  font-size: 10px;
+  font-weight: bold;
+  margin: 0 5px;
+}
+.bar {
+  width: 100%;
+  max-width: 150px;
+}
+.bar-inner {
+  height: 4px;
+  border-radius: 2px;
+}
