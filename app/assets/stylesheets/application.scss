@@ -20,6 +20,29 @@ small {
   font-size: 12px;
 }
 
+input[type=text], textarea {
+  padding: 13px 17px;
+  border-radius: 4px;
+  border: solid 2px rgba(0, 0, 0, 0.2);
+  font: inherit;
+}
+h1 {
+  margin-bottom: 1em;
+}
+.btn {
+  padding: 13px 17px;
+  border: none;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 4px;
+  background: $red;
+  transition: .3s;
+  cursor: pointer;
+  &:hover {
+    background: darken($red, 10%);
+  }
+}
+
 .nav {
   height: 63px;
   padding: 0 15px;

@@ -1,4 +1,5 @@
 class DesignsController < ApplicationController
+  expose :designs, -> { Design.includes([:user, :votes]).all }
   expose :design
 
   def create

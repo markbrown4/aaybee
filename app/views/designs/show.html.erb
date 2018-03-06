@@ -12,10 +12,12 @@
 <div class="result">
   <div class="result-header flex">
     <img class="result-header-avatar avatar avatar-small" src="https://1.gravatar.com/avatar/4ebbd083830d32e580e0e16893acf85a?s=96&d=mm" />
-    <span class="result-header-name"><%= design.user.email %></span>
+    <span class="result-header-name"><%= design.user.name %></span>
     <div class="flex-1"></div>
     <small class="votes"><%= pluralize(design.votes.count, 'vote')%></small>
   </div>
+  <h2><%= design.title %></h2>
+  <p><%= design.description %></p>
   <div class="result-bars">
     <div class="flex">
       <span class="bar-label color-red">A</span>
