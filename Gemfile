@@ -31,6 +31,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'decent_exposure', '3.0.0'
+gem 'carrierwave', '~> 1.0'
 
 group :development, :test do
   gem 'rb-readline'
@@ -39,7 +40,6 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
-
 end
 
 group :development do

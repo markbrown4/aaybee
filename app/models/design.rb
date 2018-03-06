@@ -5,4 +5,7 @@ class Design < ApplicationRecord
   validates :a, presence: true
   validates :b, presence: true
   validates :title, presence: true
+
+  mount_uploader :a, DesignUploader
+  mount_uploader :b, DesignUploader
 end
