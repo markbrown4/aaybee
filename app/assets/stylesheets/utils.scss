@@ -1,28 +1,25 @@
 
 @import "_core.scss";
 
-.grid {
-  display: grid;
+.block { display: block }
+.inline-block { display: inline-block }
+.grid { display: grid }
+
+.col-2 { column-count: 2 }
+.col-sm-2 {
+  @include respond-to(medium) {
+    column-count: 2
+  }
 }
-.grid-50 {
-  grid-template-columns: repeat(2, 50%);
-}
-.grid-gap-16 {
-  grid-gap: 16px;
-  margin-right: 16px;
-}
-.grid-gap-32 {
-  grid-gap: 32px;
-  margin-right: 32px;
-}
+.col-gap-16 { column-gap: 16px }
+.col-gap-32 { column-gap: 32px }
 .flex {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.flex-1 {
-  flex: 1;
-}
+.flex-1 { flex: 1 }
+
 .color-red { color: $red }
 .color-blue { color: $blue }
 .bg-red { background-color: $red }
