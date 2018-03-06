@@ -1,0 +1,40 @@
+<h1>Upload designs</h1>
+
+<%= form_for design, url: designs_path do |form| %>
+  <% if design.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(design.errors.count, "error") %> prohibited this from being saved:
+      </h2>
+      <ul>
+        <% design.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= form.label :a %><br>
+    <%= form.file_field :a %>
+  </p>
+
+  <p>
+    <%= form.label :b %><br>
+    <%= form.file_field :b %>
+  </p>
+
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
