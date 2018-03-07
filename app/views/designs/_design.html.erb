@@ -20,13 +20,13 @@
       <div class="flex">
         <span class="bar-label color-red">A</span>
         <span class="bar">
-          <div class="bar-inner bg-red" style="width: 80%"></div>
+          <div class="bar-inner bg-red" style="width: <%= (design.votes.where(a: true).count.to_f / design.votes.count.to_f) * 100 %>%"></div>
         </span>
       </div>
       <div class="flex">
         <span class="bar-label color-blue">B</span>
         <span class="bar">
-          <div class="bar-inner bg-blue" style="width: 20%"></div>
+          <div class="bar-inner bg-blue" style="width: <%= (design.votes.where(a: false).count.to_f / design.votes.count.to_f) * 100 %>"></div>
         </span>
       </div>
     </div>
