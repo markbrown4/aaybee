@@ -12,11 +12,15 @@
     <div class="nav nav-top flex">
       <a href="/" class="nav-link logo">aaybee</a>
       <div class="flex-1"></div>
-      <a href="#" class="nav-link">your tests</a>
-      <a href="/designs/new" class="nav-link">upload design</a>
-      <a href="#" class="nav-link">
-        <img src="https://1.gravatar.com/avatar/4ebbd083830d32e580e0e16893acf85a?s=96&d=mm" class="avatar avatar-medium" />
-      </a>
+      <% if user_signed_in? %>
+        <a href="#" class="nav-link">your tests</a>
+        <a href="/designs/new" class="nav-link">upload design</a>
+        <a href="<%= destroy_user_session_path %>" class="nav-link" rel="nofollow" data-method="delete">
+          <%= image_tag avatar_url(current_user), class: 'avatar avatar-medium', alt: '' %>
+        </a>
+      <% else %>
+        <a href="<%= new_user_session_path %>" class="nav-link">sign in</a>
+      <% end %>
     </div>
     <div class="nav flex">
       <a href="/designs" class="nav-link <%= "nav-link-active" if current_page?('/designs') %>">View all</a>
@@ -25,6 +29,12 @@
       <a href="#" class="nav-link">Sort by date</a>
     </div>
     <div class="content">
+      <% if notice %>
+      <div class="flash flash-notice"><%= notice %></div>
+      <% end %>
+      <% if alert %>
+      <div class="flash flash-alert"><%= alert %></div>
+      <% end %>
       <%= yield %>
     </div>
   </body>

@@ -14,8 +14,8 @@ b_votes = @votes[false] || 0
 </div>
 <div class="result">
   <div class="result-header flex">
-    <img class="result-header-avatar avatar avatar-small" src="https://1.gravatar.com/avatar/4ebbd083830d32e580e0e16893acf85a?s=96&d=mm" />
-    <span class="result-header-name"><%= @design.user.name %></span>
+    <%= image_tag avatar_url(@design.user), class: 'result-header-avatar avatar avatar-small', alt: '' %>
+    <span class="result-header-name"><%= @design.user.name || @design.user.email %></span>
     <div class="flex-1"></div>
     <small class="votes"><%= pluralize(a_votes + b_votes, 'vote')%></small>
   </div>
