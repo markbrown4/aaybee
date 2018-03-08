@@ -1,3 +1,7 @@
+<%
+a_votes = @votes[[design.id, true]] || 0
+b_votes = @votes[[design.id, false]] || 0
+%>
 <div class="inline-block">
   <a class="card" href="<%= design_path(design) %>">
     <div class="col-2 col-gap-16">
@@ -14,21 +18,8 @@
       <img class="result-header-avatar avatar avatar-small" src="https://1.gravatar.com/avatar/4ebbd083830d32e580e0e16893acf85a?s=96&d=mm" />
       <span class="result-header-name"><%= design.user.name %></span>
       <div class="flex-1"></div>
-      <small class="votes"><%= pluralize(design.votes.count, 'vote')%></small>
+      <small class="votes"><%= pluralize(a_votes + b_votes, 'vote')%></small>
     </div>
-    <div class="result-bars">
-      <div class="flex">
-        <span class="bar-label color-red">A</span>
-        <span class="bar">
-          <div class="bar-inner bg-red" style="width: <%= (design.votes.where(a: true).count.to_f / design.votes.count.to_f) * 100 %>%"></div>
-        </span>
-      </div>
-      <div class="flex">
-        <span class="bar-label color-blue">B</span>
-        <span class="bar">
-          <div class="bar-inner bg-blue" style="width: <%= (design.votes.where(a: false).count.to_f / design.votes.count.to_f) * 100 %>"></div>
-        </span>
-      </div>
-    </div>
+    <%= render 'designs/result_bars', a: a_votes, b: b_votes %>
   </div>
 </div>

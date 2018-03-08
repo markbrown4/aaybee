@@ -1,6 +1,7 @@
 class DesignsController < ApplicationController
   def index
-    @designs = Design.includes([:user, :votes]).all
+    @designs = Design.includes(:user).all
+    @votes = Vote.group(:design_id, :a).count
   end
 
   def new
@@ -9,6 +10,7 @@ class DesignsController < ApplicationController
 
   def show
     @design = Design.find(params[:id])
+    @votes = @design.votes.group(:a).count
   end
 
 
