@@ -31,6 +31,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'carrierwave', '~> 1.0'
+gem 'devise'
 
 group :development, :test do
   gem 'rb-readline'

@@ -1,7 +1,16 @@
 
 @import "_core.scss";
 
+.flash {
+  padding: 15px;
+  background: $red;
+  border: 1px solid rgba(#000, .1);
+  border-radius: 4px;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(#000, .5);
+}
 .avatar {
+  background: #eee;
   border-radius: 100%;
   overflow: hidden;
 }
@@ -57,4 +66,5 @@
 .bar-inner {
   height: 4px;
   border-radius: 2px;
+  min-width: 4px;
 }
